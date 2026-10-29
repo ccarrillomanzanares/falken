@@ -16,9 +16,19 @@ Buttons do not disappear completely. Direct manipulation is still better for spa
 
 The major platforms are already moving in this direction, but each with its own closed mechanism. This manifesto proposes common, open foundations so that an application written once works well with any agent, on any system, including small models running offline on modest hardware.
 
+## Fewer layers, not more
+
+Today's operating systems are layers upon layers. Every application brings its own world: its own interface toolkit, its menus and wizards, its settings panel, its help system, its updater, its permission handling and its error logging. Multiplied by hundreds of applications, and added to decades of compatibility layers, the result is systems that need 16 GB of memory to open a word processor.
+
+When the agent is the one using the applications, many of those layers can be removed or moved into the operating system, which provides them **once, for every application**: permissions, confirmations, the audit log, voice and the presentation of views. Each application is reduced to what is essential: its capabilities and its data.
+
+Not every layer is redundant. Hardware drivers, isolation between programs and security exist for good reasons and stay. What goes is the duplication, and the complexity that exists only so a person can navigate menus.
+
+Fewer layers is not an aesthetic preference: it is what lets a complete system, with a local AI agent, run on a years-old laptop with 8 GB of memory. And Falken follows its own rule: it is a thin profile on top of MCP, not one more layer.
+
 ## Principles
 
-An agent-native application follows these ten principles. Each one solves a concrete problem that appears when an agent, not a person, is the one using the application.
+An agent-native application follows these eleven principles. Each one solves a concrete problem that appears when an agent, not a person, is the one using the application.
 
 1. **Capabilities before screens.** The application declares what it can do: named actions, a short description and typed parameters. Everything that can be done through its interface can also be done through its capabilities.
 2. **The data belongs to the user and is in plain sight.** The application stores its documents in open, documented formats. The agent works on the data, not by simulating clicks on an interface.
@@ -30,6 +40,7 @@ An agent-native application follows these ten principles. Each one solves a conc
 8. **Interface on demand.** The application may offer views to confirm, choose or adjust, which the system shows only when they are needed. The view and the capability do the same thing: no functions hidden behind buttons alone.
 9. **Any modality.** The same result must be able to be spoken, read as text or shown on screen. The application indicates what is essential in each response.
 10. **Local first.** Capabilities work offline whenever the task allows. Anything that needs the network, or sends data off the device, declares it.
+11. **Use the system's services; do not bring your own.** The application relies on the operating system for permissions, confirmation, logging, voice and the presentation of views, instead of shipping its own versions. Each application is smaller, and they all behave the same way for the user.
 
 ## Anatomy of an agent-native application
 

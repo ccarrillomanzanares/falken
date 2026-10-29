@@ -16,9 +16,19 @@ Los botones no desaparecen del todo. La manipulación directa sigue siendo mejor
 
 Las grandes plataformas ya se mueven en esta dirección, pero cada una con su mecanismo propio y cerrado. Este manifiesto propone las bases comunes y abiertas para que una aplicación escrita una vez funcione bien con cualquier agente, en cualquier sistema, también con modelos pequeños que corren sin red en hardware modesto.
 
+## Menos capas, no más
+
+Los sistemas operativos de hoy son capas sobre capas. Cada aplicación trae su propio mundo: su kit de interfaz, sus menús y asistentes, su panel de ajustes, su sistema de ayuda, su actualizador, su gestión de permisos y su registro de errores. Multiplicado por cientos de aplicaciones, y sumado a décadas de capas de compatibilidad, el resultado son sistemas que necesitan 16 GB de memoria para abrir un procesador de textos.
+
+Cuando es el agente quien usa las aplicaciones, buena parte de esas capas se puede quitar o llevar al sistema operativo, que las ofrece **una sola vez para todas**: permisos, confirmaciones, registro de auditoría, voz y presentación de vistas. Cada aplicación queda reducida a lo esencial: sus capacidades y sus datos.
+
+No todas las capas sobran. Los controladores del hardware, el aislamiento entre programas y la seguridad existen por buenas razones y se quedan. Lo que sobra es la duplicación, y la complejidad pensada solo para que una persona navegue por menús.
+
+Menos capas no es una preferencia estética: es lo que permite que un sistema completo, con un agente de IA local, funcione en un portátil de hace años con 8 GB de memoria. Y Falken se aplica su propia regla: es un perfil fino sobre MCP, no una capa más.
+
 ## Principios
 
-Una aplicación nativa de agente cumple estos diez principios. Cada uno resuelve un problema concreto que aparece cuando un agente, y no una persona, es quien usa la aplicación.
+Una aplicación nativa de agente cumple estos once principios. Cada uno resuelve un problema concreto que aparece cuando un agente, y no una persona, es quien usa la aplicación.
 
 1. **Capacidades antes que pantallas.** La aplicación declara qué sabe hacer: acciones con nombre, una descripción corta y parámetros tipados. Todo lo que se puede hacer con su interfaz se puede hacer también con sus capacidades.
 2. **Los datos son del usuario y están a la vista.** La aplicación guarda sus documentos en formatos abiertos y documentados. El agente trabaja sobre los datos, no simulando clics sobre una interfaz.
@@ -30,6 +40,7 @@ Una aplicación nativa de agente cumple estos diez principios. Cada uno resuelve
 8. **Interfaz bajo demanda.** La aplicación puede ofrecer vistas para confirmar, elegir o ajustar, que el sistema muestra solo cuando hacen falta. La vista y la capacidad hacen lo mismo: no hay funciones escondidas solo en los botones.
 9. **Cualquier modalidad.** El mismo resultado debe poder decirse por voz, leerse en texto o mostrarse en pantalla. La aplicación indica qué es lo esencial de cada respuesta.
 10. **Local primero.** Las capacidades funcionan sin conexión siempre que la tarea lo permita. Lo que necesite red, o enviar datos fuera del equipo, lo declara.
+11. **Usa los servicios del sistema, no traigas los tuyos.** La aplicación delega en el sistema operativo los permisos, la confirmación, el registro, la voz y la presentación de vistas, en lugar de incluir sus propias versiones. Así cada aplicación es más pequeña, y todas se comportan igual ante el usuario.
 
 ## Anatomía de una aplicación nativa de agente
 

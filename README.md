@@ -13,7 +13,11 @@ Falken is not a new protocol. It is a profile on top of the [Model Context Proto
 - [Manifesto (English)](MANIFESTO.md)
 - [Manifiesto (español)](MANIFIESTO.md)
 
-## The ten principles
+## Fewer layers
+
+Today's operating systems are layers upon layers, and every application brings its own interface toolkit, settings, help, updater and permission handling. When the agent is the one using the applications, much of that duplication can go: the operating system provides permissions, confirmation, auditing, voice and views once, for every application. That is what lets a complete system with a local AI agent run on an old 8 GB laptop.
+
+## The eleven principles
 
 1. Capabilities before screens
 2. The data belongs to the user and is in plain sight
@@ -25,6 +29,7 @@ Falken is not a new protocol. It is a profile on top of the [Model Context Proto
 8. Interface on demand
 9. Any modality
 10. Local first
+11. Use the system's services; do not bring your own
 
 ## Contributing
 
